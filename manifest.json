@@ -1,0 +1,22 @@
+{
+    "short_name": "kNotes",
+    "name": "kNotes",
+    "description": "Miles de notas en tu escritorio",
+    "icons": [
+        {
+            "src": "img/favicon.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "img/favicon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#FFFFFF"
+}

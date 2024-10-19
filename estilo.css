@@ -1,0 +1,527 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+  
+body {
+  font-size: 16px;
+  line-height: 1.7em; 
+  /* letter-spacing: 0.03em;  */
+
+  /* font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal; */
+  
+  /* font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; */
+
+  /* font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; */
+
+  /* font-family: "Ubuntu", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; */
+
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* CUADRICULA DE DOS COLUMNAS */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-gap: 10px; /* Espacio entre los elementos */
+    max-width: 600px; 
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+
+
+}
+
+.grid-item {
+    text-align: center; /* Alinear texto al centro */
+    border: 1px solid #cccccc; 
+    padding: 10px; /* Añadir relleno para separar el contenido del borde */
+}
+
+.grid-item-enviadas {
+  text-align: center; /* Alinear texto al centro */
+  border: 1px solid #ee8787; 
+  padding: 10px; /* Añadir relleno para separar el contenido del borde */
+}
+
+.grid-item-recibidas {
+  text-align: center; /* Alinear texto al centro */
+  border: 1px solid #a8f39b; 
+  padding: 10px; /* Añadir relleno para separar el contenido del borde */
+}
+
+.clearfix {
+    clear: both; /* Limpiar flotantes */
+}
+
+/* Estilos para la imagen */
+.grid-item img {
+    display: block;
+    margin: 0 auto; /* Centrar imagen horizontalmente */
+    margin-bottom: 5px; /* Espacio bajo la imagen */
+}
+
+
+/* Estilo para el encabezado */
+#encabezado {
+            position: fixed; /* Fija el encabezado en la parte superior de la ventana */
+            top: 0; /* Posición desde la parte superior de la ventana */
+            left: 0; /* Posición desde el borde izquierdo de la ventana */
+            width: 100%; /* Ancho completo */
+            height: 50px; /* Altura del encabezado */
+            background-color: #8dd1ff; /* Color de fondo del encabezado */
+            z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+    }
+
+/* #cabezato {
+  position: fixed; 
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  height: 50px;
+  background-color: #8dd1ff; 
+  z-index: 1000;     
+} */
+
+#contenido {
+  top: 90px;
+  width: 100%; 
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+/* Para dispositivos móviles (Mobile First): */
+.contenidomd {
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  max-width: 600px; /* Ancho máximo de 600px */
+  margin: 0 auto; /* Centrado horizontalmente */
+}
+
+/* Para pantallas de ordenador (min-width: 768px): */
+@media only screen and (min-width: 768px) {
+  .contenedor {
+    width: 600px; /* Ancho fijo de 600px */
+  }
+}
+
+
+/* ENLACES */
+a:link {
+	text-decoration: none;
+color: #000000;
+}
+a:visited {
+	text-decoration: none;
+color: #000000;
+}
+a:hover {
+	text-decoration: none;
+color: #000000;
+}
+a:active {
+	text-decoration: none;
+color: #000000;
+}
+
+/* EDITOR DE NOTAS */
+/* #editordata {
+    width: 99%; 
+    height: 85vh; 
+    resize: vertical; 
+    
+} */
+
+#editordata {
+  width: calc(100% - 2px); 
+  height: calc(100vh - 80px); 
+  resize: vertical; 
+
+}
+
+/* BOTONES FLOTANTES */
+
+/* NUEVA NOTA Y VOLVER */
+#verBoton1 {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 900;
+}
+#verBoton6 {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  z-index: 900;
+}
+
+
+/* VER */
+#verBoton2 {
+    position: fixed; 
+    bottom: 10px; 
+    left: 10px; 
+    z-index: 900; 
+}
+/* COMPARTIR */
+#shareButton {
+  position: fixed; 
+  bottom: 12px; 
+  left: 65px; 
+  z-index: 900; 
+}
+/* PDF */
+#verBoton3 {
+  position: fixed; 
+  bottom: 12px; 
+  left: 120px; 
+  z-index: 900; 
+}
+/* DESCARGAR */
+#verBoton9 {
+  position: fixed; 
+  bottom: 12px; 
+  left: 175px; 
+  z-index: 999; 
+}
+/* POSICION */
+#verBoton7 {
+  position: fixed; 
+  bottom: 12px; 
+  left: 235px; 
+  z-index: 999; 
+}
+
+
+/* ARRASTRAR */
+#verBoton4 {
+  position: fixed; 
+  bottom: 1px; 
+  right: 10px; 
+  z-index: 900; 
+}
+
+#verBoton8 {
+  position: fixed; 
+  bottom: 18px; 
+  left: 25px; 
+  z-index: 999; 
+}
+
+
+
+
+/* DISEÑO DE FORMULARIO */
+*{box-sizing:border-box;}
+
+form{
+	width:100%;
+	border-radius:10px;
+	margin:auto;
+
+}
+
+form label{
+	width:72px;
+	display:inline-block;
+	font-size: 8px;
+
+}
+
+form input[type="text"],
+form input[type="color"],
+form input[type="textarea"],
+form input[type="number"],
+form input[type="date"],
+form input[type="time"],
+form input[type="password"],
+/* form input[type="checkbox"], */
+form input[type="select"],
+form input[type="email"]{
+	width:100%;
+	height:40px;
+	padding:3px 10px;
+	border:1px solid #bbd7cf;
+	border-radius:3px;
+	background-color:#ecf1f0;
+	margin:3px 0;
+	display:inline-block;
+
+}
+
+
+form input[type="checkbox"]{
+	/* width:100%; */
+	height:12px;
+	padding:3px 10px;
+	border:1px solid #bbd7cf;
+	border-radius:3px;
+	background-color:#ecf1f0;
+	/* margin:3px 0; */
+	/* display:inline-block; */
+
+}
+
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	height:40px;
+	margin:3px 0;
+  border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#ffffff;
+	background-color:#09053F;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+.botonillo {
+width:100%;
+padding:8px 16px;
+margin-top:12px;
+border:1px solid #000;
+border-radius:5px;
+display:block;
+color:#ffffff;
+background-color: #09053f;
+}
+
+.textarea{
+	width:100%;
+	border:1px solid #bbd7cf;
+	border-radius:3px;
+	background-color:#ecf1f0;			
+	margin:5px 0;
+	resize: vertical | horizontal | none | both;
+	resize: none;
+	display: block;
+
+}
+
+select{
+	width:100%;
+	height:40px;
+	border:1px solid #bbd7cf;
+	border-radius:3px;
+	background-color:#ecf1f0;			
+	margin:5px 0;
+	resize:none;
+	display:block;
+}
+
+form input[type="file"]{
+	width:100%;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:5px 0;
+	display:inline-block;
+}
+
+
+/* MODAL */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 50;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+    background-color: #1f1f1f;
+  }
+  
+  .modal-contenido {
+    background-color: #8dd1ff;
+    margin: 10% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 250px;
+    height: 380px;
+    border-radius: 10px;
+  }
+  
+  .cerrar {
+    /* color: #aaa; */
+    color: #1f1f1f;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .cerrar:hover,
+  .cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  /* TABLA PARA DISTRIBUIR BOTONES DE NOTA, ELIMINAR Y RENOMBRAR */
+  .tabla {
+    display: table;
+    width: 100%; 
+    /* max-width: 600px;  */
+    margin: 0 auto; 
+    vertical-align: bottom;
+
+  }
+  
+  .fila {
+    display: table-row;
+  }
+  
+  .celda {
+    display: table-cell;
+    border: 0px solid rgb(209, 78, 78); 
+    /* padding: 5px;  */
+    width: 33%; 
+    vertical-align: top;
+  }  
+
+  /* TEXTO PARA FECHA Y BYTES DE CADA NOTA */
+.interlin {
+  line-height: 1.3em; 
+  font-size: 9px;
+  color: #A2A2A2;
+  /* text-align: center; */
+
+}
+
+.suspensivos {
+  width: calc(1ch * 25); /* 1ch es el ancho de un carácter en la fuente usada */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* text-align: center; */
+}
+
+.letrilla {
+  line-height: 1.3em; 
+  font-size: 12px;
+  color: #000000;;
+
+}
+
+.imagen-gris {
+  /* filter: hue-rotate(90deg); */
+  /* filter: grayscale(90%); */
+  filter: brightness(0.35); /* Reduce el brillo al 50% */
+
+
+}	  
+
+.imagen-tenue {
+  filter: grayscale(100%);
+  /* filter: brightness(0.55); Reduce el brillo al 50% */
+
+}	  
+
+.rotar45 {
+  filter: grayscale(100%);
+  /* transform: rotate(45deg); */
+}
+
+.cambiocolor {
+    filter: hue-rotate(180deg);
+    /* Puedes combinar varios filtros para obtener el color deseado */
+}
+
+
+.recibidos {
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); 2 columnas */
+  /* grid-gap: 10px; Espacio entre los elementos */
+  max-width: 600px; 
+  margin: 0 auto; /* Centra la tabla horizontalmente */
+
+
+}
+
+.botonverde {
+  background-color: green; /* Color de fondo rojo */
+  color: white; /* Color de texto blanco */
+  border: none; /* Quita el borde */
+  padding: 3px 10px; /* Espacio interno del botón */
+  text-align: center; /* Centra el texto horizontalmente */
+  text-decoration: none; /* Quita subrayado por defecto */
+  display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Cambia el color de fondo al pasar sobre el botón */
+.botonverde:hover {
+  background-color: darkgreen; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+.botonrojo {
+  background-color: red; /* Color de fondo rojo */
+  color: white; /* Color de texto blanco */
+  border: none; /* Quita el borde */
+  padding: 3px 10px; /* Espacio interno del botón */
+  text-align: center; /* Centra el texto horizontalmente */
+  text-decoration: none; /* Quita subrayado por defecto */
+  display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Cambia el color de fondo al pasar sobre el botón */
+.botonrojo:hover {
+  background-color: darkred; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+
+.circulo {
+  /* width: 60px; 
+  height: 60px; */
+  /* background-image: url('img/colaborativo.gif'); */
+  /* background-size: cover; */
+  /* background-color: white;  */
+  border-radius: 50%; 
+}
+
+
+.boton-transparente {
+  background-color: transparent;
+  border: 0px solid #000; /* Cambia el color del borde según tu preferencia */
+  color: #000; /* Cambia el color del texto según tu preferencia */
+  padding: 5px; 
+  /* font-size: 16px;  */
+  cursor: pointer; 
+}
+
+/* Cambia el estilo al pasar el cursor sobre el botón */
+/* .boton-transparente:hover {
+  background-color: #000; 
+  color: #fff; 
+} */
+
+.semi-transparent {
+  opacity: 0.7; /* Valor entre 0 (transparente) y 1 (opaco) */
+}
+
+
+
+</style>

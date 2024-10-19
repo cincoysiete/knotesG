@@ -1,0 +1,84 @@
+<?php
+session_start();
+include("identifica.php"); 
+include("estilo.css"); 
+?>
+<html lang="es">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="img/favicon.png" />
+<meta charset="utf-8">
+<title>Knotes</title>
+<a id="verBoton8" href="javascript:window.history.go(-1)" title="Volver a notas"><img src="img/volver.png" width="70px"></a>
+
+<!-- ENCABEZADO DE LA APP -->
+<div id="encabezado">
+<center>
+<table width="99%" border="0">
+<tr><td align="left" width="20%">
+</td><td align="center" width="50%">
+</td><td align="right">
+<img src="img/knotes.png" height="20px"><br>
+<?php echo '<font size="1px" color="black">'.base64_decode($_SESSION["usuarioZ"])."</font>"; ?>
+</td></tr></table>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal('modal')">&times;</span>
+    <h2>Foto de perfil</h2>
+    <?php
+      $_SESSION["we"]=base64_decode($_GET["we"]);
+      echo base64_decode($_GET["we"]);
+    echo '<center><img src="'.$_SESSION["usuarioZ"].'/perfil.png'.'" width="50px"></center>';
+      echo "<br>";
+    ?>
+
+<form action="subirperfil.php" method="post" enctype="multipart/form-data">
+<input type="file" name="imagen" id="imagen">
+      <br><br>
+      <input type="submit" value="Subir Imagen" value="Renombra">
+    </form>
+
+    <br><br><br>
+
+    <!-- <form action="eliminaperfil.php" method="post" enctype="multipart/form-data"> -->
+<!-- <input type="file" name="imagen" id="imagen"> -->
+      <!-- <br><br> -->
+      <center><a href="eliminaperfil.php"><button class="botonrojo">Elimina foto</button></a></center>
+    <!-- </form> -->
+
+</div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    abrirModal('modal');
+  });
+
+  function abrirModal(idModal) {
+    var modal = document.getElementById(idModal);
+    modal.style.display = "block";
+
+    // Obtener el campo de texto por su ID
+    var input = document.getElementById('nuevonombres');
+    
+    // Obtener la longitud del texto dentro del campo de texto
+    var length = input.value.length;
+    
+    // Mover el cursor al final del texto
+    input.setSelectionRange(length, length);
+    
+    // Establecer el foco en el campo de texto
+    input.focus();
+    input.select();
+  }
+
+  function cerrarModal(idModal) {
+    var modal = document.getElementById(idModal);
+    modal.style.display = "none";
+    history.back(); // Retrocede en el historial del navegador
+  }
+
+</script>

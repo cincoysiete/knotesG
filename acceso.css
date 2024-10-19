@@ -1,0 +1,195 @@
+<style>
+
+body {
+    /* font-family: Arial, sans-serif; */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  margin: 0;
+}
+
+/* ENLACES */
+a:link {
+	text-decoration: none;
+color: #34484E;
+}
+a:visited {
+	text-decoration: none;
+color: #34484E;
+}
+a:hover {
+	text-decoration: none;
+color: #34484E;
+}
+a:active {
+	text-decoration: none;
+color: #34484E;
+}
+
+.contenedor {
+    border-radius: 10px; /* Ajusta el valor según desees */
+    border: 1px solid #ccc; /* Opcional: agrega un borde */
+    background-color:#ffffff;
+    position: fixed; /* Usamos posición fija */
+    top: 50%; /* Centramos verticalmente */
+    left: 50%; /* Centramos horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustamos para centrar completamente */
+    height: 340px;
+    max-width: 300px;
+    width: 90%;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 24px 24px 8px rgba(49, 49, 49, 0.5), 6px 6px 20px rgba(0, 0, 0, 0.5); 
+
+}
+	
+.marco {
+    border-radius: 10px; 
+    border: 1px solid #ccc; 
+    background-color:#ffffff;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    height: 300px;
+    max-width: 320px;
+    width: 90%;
+    padding-left: 5px;
+    padding-right: 40px;
+
+}
+
+
+body{
+	/* background: url(<?php echo $imgfondoZ; ?>) no-repeat center center fixed; */
+/* -webkit-background-size: cover; */
+/* -moz-background-size: cover; */
+/* -o-background-size: cover; */
+/* background-size: cover; */
+}
+
+.background {
+	background: url(<?php echo $imgfondoZ; ?>) no-repeat center center fixed;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	animation: colorFade 10s infinite;
+}
+
+@keyframes colorFade {
+	0%, 100% {
+		filter: none; 
+	}
+	50% {
+		filter: grayscale(100%)
+	}
+}
+
+<style>
+*{box-sizing:border-box;}
+
+form{
+	width:100%;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:<?php echo $fondoformuZ; ?>;
+}
+
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="password"],
+form input[type="text"],
+form input[type="email"]{
+	font-size: 16px;
+	width:90%;
+	height:40px;
+	padding:3px 10px;
+	border:1px solid #afafaf;
+	border-radius:3px;
+	/* background-color:#dff7f7; */
+	margin:8px 0;
+	display:inline-block;
+}
+
+form input[type="submit"]{
+	width:90%;
+	padding:8px 16px;
+	margin-top:12px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#ffffff;
+	background-color:<?php echo $fondobotonaccederZ; ?>;
+	/* background-color:#2C19BA; */
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	resize: vertical | horizontal | none | both
+	resize:none;
+	display:block;
+}
+
+select{
+	width:100%;
+	height:40px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}
+
+form input[type="file"]{
+	width:100%;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+.textopequenoZ {
+	font-size: x-small; /* También puedes usar un valor específico en píxeles, em, rem, etc. */
+	text-align: left;
+	color: gray; 
+}
+
+.textopequenoZcenter {
+	font-size: x-small; /* También puedes usar un valor específico en píxeles, em, rem, etc. */
+	text-align: center;
+	color: gray; 
+}
+
+.buttonZ {
+	width:60%;
+	padding-top: 7px;
+	height:18px;
+	margin-top:18px;
+	/* margin:3px 0; */
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#000000;
+	font-size: x-small;
+	background-color:<?php echo $fondobotoncrearZ; ?>;
+	/* background-color:#82d689; */
+} 
+
+</style>
+
