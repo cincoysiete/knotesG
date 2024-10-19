@@ -1,5 +1,6 @@
 ## kNotes
-Te damos la bienvenida a kNotes, una aplicación multiplataforma para tomar notas rápidamente, sin complicaciones, sin aprender nada.
+Te damos la bienvenida a kNotes, una aplicación web multiplataforma para tomar notas rápidamente, sin complicaciones, sin aprender nada.
+
 ### Super opciones 
 - Infinitas notas actualizadas en todos tus dispositivos
 - Escribir notas en formato markdown. Todo un mundo de posibilidades!
