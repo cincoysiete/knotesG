@@ -13,4 +13,5 @@ $pdf->setFont('helvetica', '', $_SESSION["tamanotxt"]);
 $pdf->writeHTML($_SESSION["contenidoHTML"], true, false, true, false, '');
 $pdf->Output($nombrepdf, 'D');
 
+
 ?>
