@@ -1,2 +1,2 @@
 
-*Mira el Wiki para tener todos los detalles del proyecto kNotes*
+*Mira el [wiki](https://github.com/cincoysiete/knotesG/wiki) para tener todos los detalles del proyecto*
