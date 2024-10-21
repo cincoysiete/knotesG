@@ -31,9 +31,9 @@ include("acceso.css");
   
 <?php
 if (isset($_POST["elusuario"]) && $_POST["elusuario"]!="") {
-  // ESTAS DOS LINEAS DEBEN ESTAR EN ESTE ORDEN YA QUE .encriptado.php UTILIZA LA VARIABLE $_SESSION["gusuario1"]
+  // ESTAS DOS LINEAS DEBEN ESTAR EN ESTE ORDEN YA QUE encriptado.php UTILIZA LA VARIABLE $_SESSION["gusuario1"]
   $_SESSION["gusuario1"]=$_POST["elusuario"];
-  include($retroZ.".encriptado.php");
+  include($retroZ."encriptado.php");
   // -----------------------------------------------------------------------------------------
 
   // MIRA LAS CREDENCIALES SEGUN EL EMAIL QUE HAYAS ESCRITO

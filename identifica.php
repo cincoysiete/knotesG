@@ -1,6 +1,6 @@
 <?php
 include("variablesZ.php");
-include($retroZ.".encriptado.php");
+include($retroZ."encriptado.php");
 
 // SESION PEGAJOSA. LA SESION NO SE CIERRA HASTA QUE LO HAGAS DESDE EL MENU DESPLEGABLE
 $sipaso="no";

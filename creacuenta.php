@@ -42,9 +42,9 @@ if ($_GET["kn"]!=""){
 }
 // SI ESCRIBES EL EMAIL Y EL CODIGO
 if (isset($elusuario) && isset($elcodigo) && trim($_SESSION["codigoAleatorio"])==trim(strtoupper($elcodigo))) {
-  // ESTAS DOS LINEAS DEBEN ESTAR EN ESTE ORDEN YA QUE .encriptado.php UTILIZA LA VARIABLE $_SESSION["gusuario1"]
+  // ESTAS DOS LINEAS DEBEN ESTAR EN ESTE ORDEN YA QUE encriptado.php UTILIZA LA VARIABLE $_SESSION["gusuario1"]
   $_SESSION["gusuario1"]=$elusuario;
-  include($retroZ.".encriptado.php");
+  include($retroZ."encriptado.php");
   // -----------------------------------------------------------------------------------------
 
 // LA CUENTA QUE INTENTAS CREAR YA EXISTE

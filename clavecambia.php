@@ -26,8 +26,8 @@ if ($_SESSION["sipasaZ"]!=$_SESSION["sipasoZ"]){header("Location: index.php");}
   
 <?php
 if (isset($_POST["cl0"]) && $_POST["cl1"]!="" && $_POST["cl2"]!="") {
-  // ESTAS DOS LINEAS DEBEN ESTAR EN ESTE ORDEN YA QUE .encriptado.php UTILIZA LA VARIABLE $_SESSION["gusuario1"]
-  include($retroZ.".encriptado.php");
+  // ESTAS DOS LINEAS DEBEN ESTAR EN ESTE ORDEN YA QUE encriptado.php UTILIZA LA VARIABLE $_SESSION["gusuario1"]
+  include($retroZ."encriptado.php");
   // -----------------------------------------------------------------------------------------
 
   $clave="";

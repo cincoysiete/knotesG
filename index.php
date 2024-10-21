@@ -10,7 +10,7 @@ session_set_cookie_params([
 ]);
 include("acceso.css"); 
 include('Mobile_Detect.php');
-include($retroZ.".encriptado.php");
+include($retroZ."encriptado.php");
 
 // SESION PEGAJOSA
 // LA SESION NO SE CIERRA HASTA QUE LO HAGAS DESDE EL MENU DESPLEGABLE
@@ -55,9 +55,9 @@ if (isset($imgtabla) and $imgtabla=="si"){$_SESSION["verimagenes"]=1;} else {$_S
 
   // SI HEMOS ESCRITO USUARIO Y CONTRASEÑA
 if (isset($_POST["gusuario"]) and isset($_POST["gpassword"])) {
-// ESTAS DOS LINEAS DEBEN ESTAR EN ESTE ORDEN YA QUE .encriptado.php UTILIZA LA VARIABLE $_SESSION["gusuario1"]
+// ESTAS DOS LINEAS DEBEN ESTAR EN ESTE ORDEN YA QUE encriptado.php UTILIZA LA VARIABLE $_SESSION["gusuario1"]
   $_SESSION["gusuario1"]=$_POST["gusuario"];
-  include($retroZ.".encriptado.php");
+  include($retroZ."encriptado.php");
   // -----------------------------------------------------------------------------------------
 
   $_SESSION["gclave1"]=$_POST["gpassword"];

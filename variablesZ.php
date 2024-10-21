@@ -3,7 +3,7 @@
 // EMAIL DESDE EL QUE SE ENVIAN LOS CORREOS
 $_SESSION["emailZ"]="5ysiete@gmail.com";
 
-// DIRECTORIO HACIA ATRAS EN EL QUE SE UBICA .encriptado.php
+// DIRECTORIO HACIA ATRAS EN EL QUE SE UBICA encriptado.php
 $retroZ="";
 
 // IMAGEN DE FONDO
